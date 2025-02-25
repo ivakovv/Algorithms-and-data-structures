@@ -2,21 +2,46 @@ package SortAlgorithms;
 
 public class SortManager {
 
-    public static int[] BubbleSortDesc(int[] mass){
-        int helpPer = 0;
-        for(int i = 0; i < mass.length - 1; i++){
-            for(int j = 0; j < mass.length - i - 1; j++){
-                countIf++;
-                if(mass[j] < mass[j + 1]){
-                    countSwap++;
-                    helpPer = mass[j];
-                    mass[j] = mass[j + 1];
-                    mass[j + 1] = helpPer;
+    public static int[] BubbleSortDesc(int[] arr){
+        int temp = 0;
+        for(int i = 0; i < arr.length - 1; i++){
+            for(int j = 0; j < arr.length - i - 1; j++){
+                if(arr[j] < arr[j + 1]){
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                 }
             }
         }
-        return mass;
+        return arr;
     }
+
+    public void selectionSort(int[] arr){
+        for(int i = 0; i < arr.length; i++){
+            int minIndex = i;
+            for(int j = i + 1; j < arr.length; j++){
+                if(arr[minIndex] > arr[j])
+                    minIndex = j;
+            }
+            if(minIndex != i){
+                int temp = arr[minIndex];
+                arr[minIndex] = arr[i];
+                arr[i] = temp;
+            }
+        }
+    }
+    public void insertionSort(int[] arr){
+        for(int i = 1; i < arr.length; i++){
+            int sorted = i - 1;
+            while(sorted > -1 && arr[sorted] > arr[sorted + 1]){
+                int temp = arr[sorted];
+                arr[sorted] = arr[sorted + 1];
+                arr[sorted + 1] = temp;
+                sorted--;
+            }
+        }
+    }
+
     public static int[] generateRandomArray(int n){
         int[] result = new int[n];
         for (int i = 0; i < result.length; i++) {
