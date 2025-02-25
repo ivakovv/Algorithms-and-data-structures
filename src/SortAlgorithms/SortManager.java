@@ -2,7 +2,7 @@ package SortAlgorithms;
 
 public class SortManager {
 
-    public static int[] BubbleSortDesc(int[] arr){
+    public static int[] bubbleSortDesc(int[] arr){
         int temp = 0;
         for(int i = 0; i < arr.length - 1; i++){
             for(int j = 0; j < arr.length - i - 1; j++){
@@ -16,7 +16,7 @@ public class SortManager {
         return arr;
     }
 
-    public void selectionSort(int[] arr){
+    public static void selectionSort(int[] arr){
         for(int i = 0; i < arr.length; i++){
             int minIndex = i;
             for(int j = i + 1; j < arr.length; j++){
@@ -30,7 +30,7 @@ public class SortManager {
             }
         }
     }
-    public void insertionSort(int[] arr){
+    public static void insertionSort(int[] arr){
         for(int i = 1; i < arr.length; i++){
             int sorted = i - 1;
             while(sorted > -1 && arr[sorted] > arr[sorted + 1]){

@@ -10,7 +10,7 @@ public class Main {
 //        int[] mass = new int[]{30, 29, 26, 27, 28, 25, 22, 23, 24, 21,
 //                20, 19, 16, 17, 18, 15, 12, 13, 14, 11,
 //                10, 9, 6, 7, 8, 5, 2, 3, 4, 1};
-        System.out.println(Arrays.toString(SortAlgorithms.SortManager.BubbleSortDesc(mass)));
+        System.out.println(Arrays.toString(SortAlgorithms.SortManager.bubbleSortDesc(mass)));
 
     }
 }
