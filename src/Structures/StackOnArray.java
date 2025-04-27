@@ -3,13 +3,13 @@ package Structures;
 import java.util.EmptyStackException;
 
 public class StackOnArray<T> {
-    private int maxSixe;
+    private int maxSize;
     private Object[] stackArray;
     private int top;
 
     public StackOnArray(int s){
-        maxSixe = s;
-        stackArray = new Object[maxSixe];
+        maxSize = s;
+        stackArray = new Object[maxSize];
         top = -1;
     }
 
@@ -43,7 +43,7 @@ public class StackOnArray<T> {
         return (T) stackArray[top];
     }
     public boolean isFull(){
-        return top >= maxSixe - 1;
+        return top >= maxSize - 1;
     }
 
     public static void main(String[] args) {
