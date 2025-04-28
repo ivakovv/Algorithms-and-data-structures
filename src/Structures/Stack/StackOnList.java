@@ -1,4 +1,6 @@
-package Structures;
+package Structures.Stack;
+
+import Structures.LinkedList;
 
 import java.util.EmptyStackException;
 

@@ -1,9 +1,9 @@
-package Structures;
+package Structures.Stack;
+
 
 import java.util.Scanner;
-import java.util.Stack;
 
-public class PolishNotationCalculator {
+public class Calculator {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -14,7 +14,7 @@ public class PolishNotationCalculator {
         int choice = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.println("Введите выражение (разделяя элементы пробелами):");
+        System.out.println("Введите выражение (без пробелов):");
         String expression = scanner.nextLine();
 
         System.out.println("Введите значения операндов (если есть буквенные переменные):");
@@ -35,9 +35,9 @@ public class PolishNotationCalculator {
 
         double result = 0;
         if (choice == 1) {
-            result = evaluatePostfix(expression, variables);
+            result = evaluatePostfix(RecordConverter.convertToPolishRecord(expression), variables);
         } else if (choice == 2) {
-            result = evaluatePrefix(expression, variables);
+            result = evaluatePrefix(RecordConverter.convertToPrefix(expression).replace("", " ").trim(), variables);
         } else {
             System.out.println("Неверный выбор типа записи");
             return;
@@ -47,7 +47,7 @@ public class PolishNotationCalculator {
     }
 
     public static double evaluatePostfix(String expression, java.util.Map<String, Double> variables) {
-        Stack<Double> stack = new Stack<>();
+        StackOnList<Double> stack = new StackOnList<>();
         String[] tokens = expression.split(" ");
 
         for (String token : tokens) {
@@ -71,7 +71,7 @@ public class PolishNotationCalculator {
     }
 
     public static double evaluatePrefix(String expression, java.util.Map<String, Double> variables) {
-        Stack<Double> stack = new Stack<>();
+        StackOnList<Double> stack = new StackOnList<>();
         String[] tokens = expression.split(" ");
 
         for (int i = tokens.length - 1; i >= 0; i--) {

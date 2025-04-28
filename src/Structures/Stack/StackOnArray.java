@@ -1,4 +1,4 @@
-package Structures;
+package Structures.Stack;
 
 import java.util.EmptyStackException;
 
