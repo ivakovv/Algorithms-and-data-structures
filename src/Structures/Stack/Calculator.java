@@ -47,7 +47,7 @@ public class Calculator {
     }
 
     public static double evaluatePostfix(String expression, java.util.Map<String, Double> variables) {
-        StackOnList<Double> stack = new StackOnList<>();
+        StackOnArray<Double> stack = new StackOnArray<>(100);
         String[] tokens = expression.split(" ");
 
         for (String token : tokens) {

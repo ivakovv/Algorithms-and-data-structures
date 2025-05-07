@@ -28,10 +28,10 @@ public class Main {
 //                20, 19, 16, 17, 18, 15, 12, 13, 14, 11,
 //                10, 9, 6, 7, 8, 5, 2, 3, 4, 1};
         //System.out.println(Arrays.toString(SortAlgorithms.SortManager.insertionSort(mass)));
-        int[] mass = new int[]{15, 8, 29, 93, 31, 55, 70};
-        int[] mass2 = new int[]{15, 8, 29, 93, 31, 55, 70};
-        System.out.println(Arrays.toString(SortManager.bubbleSortDesc(mass)));
-        System.out.println(Arrays.toString(SortManager.shakeSortModified(mass2)));
+//        int[] mass = new int[]{15, 8, 29, 93, 31, 55, 70};
+//        int[] mass2 = new int[]{15, 8, 29, 93, 31, 55, 70};
+        //System.out.println(Arrays.toString(SortManager.bubbleSortDesc(mass)));
+        //System.out.println(Arrays.toString(SortManager.shakeSortModified(mass2)));
 
     }
 }

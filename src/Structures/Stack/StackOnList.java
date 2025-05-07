@@ -38,7 +38,7 @@ public class StackOnList<T extends Comparable<T>> {
         stackOnList.push("2");
         System.out.println(stackOnList.pop());
         System.out.println(stackOnList.pop());
-        System.out.println(stackOnList.pop());
+        System.out.println(stackOnList.isEmpty());
 
     }
 }

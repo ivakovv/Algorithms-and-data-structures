@@ -155,4 +155,41 @@ public class SortManager {
         }
         return result;
     }
+    public static int[] gnomeSort(int[] arr) {
+        int i = 0;
+        while (i < arr.length) {
+            if (i == 0 || arr[i] >= arr[i - 1]) {
+                i++;
+            } else {
+                int temp = arr[i];
+                arr[i] = arr[i - 1];
+                arr[i - 1] = temp;
+                i--;
+            }
+        }
+        return arr;
+    }
+    public static int[] optimizedGnomeSort(int[] arr) {
+        int i = 1;
+        int lastSwapPos = 0;
+
+        while (i < arr.length) {
+            if (i == 0 || arr[i] >= arr[i - 1]) {
+                if (lastSwapPos != 0) {
+                    i = lastSwapPos;
+                    lastSwapPos = 0;
+                }
+                i++;
+            } else {
+                int temp = arr[i];
+                arr[i] = arr[i - 1];
+                arr[i - 1] = temp;
+
+                lastSwapPos = i + 1;
+                i--;
+            }
+        }
+        return arr;
+    }
+
 }

@@ -57,7 +57,7 @@ public class StackOnArray<T> {
         System.out.println(stackOnArray.pop());
         System.out.println(stackOnArray.pop());
         System.out.println(stackOnArray.pop());
-        System.out.println(stackOnArray.pop());
+        System.out.println(stackOnArray.isEmpty());
 //        stackOnArray.pop();
 //        System.out.println(stackOnArray.peek());
     }
